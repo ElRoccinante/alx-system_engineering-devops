@@ -1,1 +1,0 @@
-inside shell Readme

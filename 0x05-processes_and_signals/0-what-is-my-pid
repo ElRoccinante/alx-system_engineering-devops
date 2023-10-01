@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 # get the pid
-PID=$(ps | pgrep bash)
-echo "$PID" | head -n 1
+echo "My PID is $$"

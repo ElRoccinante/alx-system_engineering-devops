@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-# Les options -e permettent d'afficher tous les processus, même ceux sans TTY
-# Les options -o spécifient les colonnes que nous voulons afficher
+# get the table of all process
 ps -e -o user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command | head -n 50

@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
-# Find PIDs of processes whose names contain "bash"
-pgrep bash | while read -r pid; do
-  # Get the process name from /proc
-  process_name=$(cat /proc/$pid/cmdline | tr '\0' ' ')
-
-  # Output PID and process name
-  echo "$pid $process_name"
+script_pid=$$
+bash_pids=$(pgrep bash)
+for pid in $bash_pids; do
+  echo "$pid bash"
 done
+echo "$script_pid"

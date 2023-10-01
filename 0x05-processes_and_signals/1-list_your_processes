@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
-# get the table of all process
-ps auxf -A
+# Utilise la commande 'ps' pour afficher les informations des processus
+# Les options -e permettent d'afficher tous les processus, même ceux sans TTY
+# Les options -o spécifient les colonnes que nous voulons afficher
+ps -auxf

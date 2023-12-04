@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
-# Using HAProxy to load balance
+#HAproxyyiy
+apt-get update
+apt-get install haproxy -y
 
-sudo apt-get -y update
-sudo apt-get -y upgrade
-sudo apt-get -y install haproxy
-sudo sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
-sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.original
-sudo sed -i "$ a\listen 347145-lb-01\n\tbind *:80\n\tmode http\n\tbalance roundrobin\n\toption httpclose\n\toption forwardfor\n\tserver 347145-web-02 52.201.159.101:80 check\n\tserver 347145-web-01 54.173.240.169:80 check" /etc/haproxy/haproxy.cfg
-sudo service haproxy start
+echo "
+frontend eyes
+    bind *:80
+    default_backend heart
+
+backend heart
+    balance roundrobin
+    server 387178-web-01 54.173.240.169:80 check
+    server 387178-web-02 52.201.159.101:80 check
+" >> /etc/haproxy/haproxy.cfg
+service haproxy restart

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Script to resolve the curl 0:80 error by creating a symbolic link and starting nginx.
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx start

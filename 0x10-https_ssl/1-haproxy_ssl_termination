@@ -33,10 +33,10 @@ defaults
     errorfile 502 /etc/haproxy/errors/502.http
     errorfile 503 /etc/haproxy/errors/503.http
     errorfile 504 /etc/haproxy/errors/504.http
-frontend eyes
+frontend raise-up-school.tech
     bind *:80
-    bind *:443 ssl crt /etc/haproxy/certs/www.imllil.tech.pem
-    #bind *:8443 ssl crt /etc/letsencrypt/live/www.imllil.tech/fullchain2.pem
+    bind *:443 ssl crt /etc/haproxy/certs/www.raise-up-school.tech.pem
+    #bind *:8443 ssl crt /etc/letsencrypt/live/www.raise-up-school.tech/fullchain2.pem
     default_backend heart
     mode http
     #http-request add-header X-Forwarded-Proto http

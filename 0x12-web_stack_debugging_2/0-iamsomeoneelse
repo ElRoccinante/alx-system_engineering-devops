@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script executes the whoami command for the specified user.
+
+# Usage: ./run_whoami.sh <username>
+# Example: ./run_whoami.sh john_doe
+
+# Run the whoami command with elevated privileges for the specified user.
+sudo -u "$1" whoami

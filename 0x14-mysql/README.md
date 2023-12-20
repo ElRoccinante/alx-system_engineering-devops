@@ -1,6 +1,1 @@
-#!/bin/bash
-For this project, we expect to look at these concepts:
-
-Database administration
-Web stack debugging
-solve prblm database (master-slave/master1:slave1-master2:slave2)
+mysql Ver 8.0.35-0ubuntu0.20.04.1 for Linux on x86_64 ((Ubuntu))

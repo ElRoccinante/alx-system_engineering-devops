@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Retrieve and display task completion information for a given employee ID."""
+""" data in the CSV format"""
 import requests
 import sys
 
